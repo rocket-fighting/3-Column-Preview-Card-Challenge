@@ -1,0 +1,139 @@
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-grey: hsl(0, 0%, 95%);
+}
+
+/* Global styles */
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--very-light-grey);
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+}
+
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--transparent-white);
+    font-size: 15px;
+    max-width: 90%;
+    padding-bottom: 5rem;
+}
+
+button {
+    display: inline-flex;
+    background: var(--very-light-grey);
+    color: black;
+    font-family: 'Lexend Deca', sans-serif;
+    mix-blend-mode: screen;
+    padding: 1rem 2rem;
+    margin: 0;
+    border: none;
+    border-radius: 1.5rem;
+}
+
+button:hover {
+    cursor: pointer;
+    background: black;
+    mix-blend-mode: screen;
+    border: var(--very-light-grey) 2px solid;
+    color: var(--very-light-grey);
+    padding: 0.9rem 1.9rem;
+}
+
+button:active {
+    background: var(--very-light-grey);
+    color: black;
+    mix-blend-mode: screen;
+    padding: 0.9rem 1.9rem;
+}
+
+/* Cards */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    padding-bottom: 1rem;
+}
+
+.card {
+    max-width: 15rem;
+    padding: 3rem;
+    max-height: 30rem;
+}
+.card-1 {
+    background: var(--bright-orange);
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.card-2 {
+    background: var(--dark-cyan);
+}
+
+.card-3 {
+    background: var(--very-dark-cyan);
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.attribution { 
+    display: block;
+    text-align: center;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 11px; 
+    color: black;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+/* Media queries */
+@media(max-width:900px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10%;
+        padding-bottom: 1rem;
+    }
+
+    .card {
+        min-width: 15rem;
+        max-height: 367px;
+        padding: 3rem;
+    }
+
+    .card-1 {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0.5rem;
+    }
+
+    .card-3 {
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        border-top-right-radius: 0;
+    }
+
+    button {
+        display: inline-flex;
+        box-sizing: border-box;
+        background: var(--very-light-grey);
+        color: black;
+        font-family: 'Lexend Deca', sans-serif;
+        mix-blend-mode: screen;
+        padding: 1rem 2rem;
+        margin: 0;
+        border: none;
+        border-radius: 1.5rem;
+    }
+}
